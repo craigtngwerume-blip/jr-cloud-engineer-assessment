@@ -14,4 +14,4 @@ The repository is organized by task areas for easy navigation:
 * **`/scripts`**: Bash scripts for web server automation and log rotation (including crontab).
 * **`/troubleshooting`**: Root-cause analysis and resolution steps for common AWS issues.
 
----
+-

@@ -1,0 +1,71 @@
+{
+    "LaunchTemplateVersions": [
+        {
+            "LaunchTemplateId": "lt-01a3e3c0576d48f7c",
+            "LaunchTemplateName": "jr-assessment-lt",
+            "VersionNumber": 1,
+            "VersionDescription": "Assessment Launch Template",
+            "CreateTime": "2026-01-17T13:24:47+00:00",
+            "CreatedBy": "arn:aws:sts::296274010522:assumed-role/AWSReservedSSO_DeveloperAccess_a4a6262b8ec5160a/craign@synthesis.co.za",
+            "DefaultVersion": true,
+            "LaunchTemplateData": {
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/xvda",
+                        "Ebs": {
+                            "Encrypted": false,
+                            "DeleteOnTermination": true,
+                            "Iops": 3000,
+                            "SnapshotId": "snap-0b3856eeec6de75e3",
+                            "VolumeSize": 10,
+                            "VolumeType": "gp3",
+                            "Throughput": 125
+                        }
+                    }
+                ],
+                "ImageId": "ami-0fb60ab214a70f0c4",
+                "InstanceType": "t3.micro",
+                "KeyName": "craig-assessment",
+                "TagSpecifications": [
+                    {
+                        "ResourceType": "instance",
+                        "Tags": [
+                            {
+                                "Key": "Project",
+                                "Value": "jr-assessment"
+                            },
+                            {
+                                "Key": "Owner",
+                                "Value": "craig"
+                            }
+                        ]
+                    },
+                    {
+                        "ResourceType": "volume",
+                        "Tags": [
+                            {
+                                "Key": "Project",
+                                "Value": "jr-assessment"
+                            },
+                            {
+                                "Key": "Owner",
+                                "Value": "craig"
+                            }
+                        ]
+                    }
+                ],
+                "SecurityGroupIds": [
+                    "sg-0ddf2135a9467a8bf"
+                ],
+                "MetadataOptions": {
+                    "HttpTokens": "required",
+                    "HttpPutResponseHopLimit": 2,
+                    "HttpEndpoint": "enabled"
+                }
+            },
+            "Operator": {
+                "Managed": false
+            }
+        }
+    ]
+}
